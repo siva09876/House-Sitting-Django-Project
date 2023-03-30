@@ -1,0 +1,158 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+     integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+     <link rel="stylesheet" href="{% static 'css/registration 1.css' %}">
+</head>
+<body>
+  <!--navbar code -->
+  <section id="home">
+  {% include 'my_app/navbar.html' %}  
+  </section>
+    <!--register-->
+    <section class="h-100 bg-dark">
+        <div class="container py-5 h-100">
+          <div class="row d-flex justify-content-center align-items-center h-100">
+            <div class="col">
+              <div class="card card-registration my-4">
+                <div class="row g-0">
+                  <div class="col-xl-6 d-none d-xl-block">
+                    <img src="{% static 'img/register 1.jpg' %}"
+                      alt="Sample photo" class="img-fluid"
+                      style="border-top-left-radius: .25rem; height:100%; border-bottom-left-radius: .25rem; border-bottom: 5rem;" />
+                  </div>
+                  <div class="col-xl-6">
+                    <div class="card-body p-md-5 text-black">
+                      <h3 class="mb-5 text-uppercase text-center">Registration form</h3>
+                      <form action="" method="post">
+                        {% csrf_token %}
+                      <div class="input-group col-md-6 mb-4">
+                        <span class="input-group-text">First and last name</span>
+                        <input type="text" name="fname" for="validationDefault01" aria-label="First name" class="form-control" required>
+                        <input type="text" name="lname" for="validationDefault02" aria-label="Last name" class="form-control" required>
+                      </div>
+      
+                      <!--<div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="form3Example1m" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Example1m">First name</label>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <input type="text" id="form3Example1n" class="form-control form-control-lg" />
+                            <label class="form-label" for="form3Example1n">Last name</label>
+                          </div>
+                        </div>
+                      </div>-->
+      
+                      <div class="row">
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1m1">Age</label>
+                            <select class="form-select" name="age" aria-label="Default select example" required>
+                                <option value="" disabled selected>Open this select menu</option>
+                                <option value="20-30">20-30</option>
+                                <option value="31-40">31-40</option>
+                                <option value="above 40">above 40</option>                        
+                            </select>
+                          </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                          <div class="form-outline">
+                            <label class="form-label" for="form3Example1n1">House type</label>
+                            <select class="form-select" name="house" aria-label="Default select example" required>
+                                <option value="" disabled selected>Open this select menu</option>
+                                <option value="Appartment">Apartment</option>
+                                <option value="Own house">own house</option>
+                                <option>rental</option>                        
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+      
+                     
+      
+                      <div class="d-md-flex justify-content-start align-items-center mb-4 py-2">
+      
+                        <h6 class="mb-0 me-4">Gender: </h6>
+      
+                        <div class="form-check form-check-inline mb-0 me-4">
+                          <input class="form-check-input" type="radio" name="gender" id="femaleGender"
+                            value="Female" />
+                          <label class="form-check-label" for="femaleGender">Female</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline mb-0 me-4">
+                          <input class="form-check-input" type="radio" name="gender" id="maleGender"
+                            value="Male" />
+                          <label class="form-check-label" for="maleGender">Male</label>
+                        </div>
+      
+                        <div class="form-check form-check-inline mb-0">
+                          <input class="form-check-input" type="radio" name="gender" id="otherGender"
+                            value="Other" />
+                          <label class="form-check-label" for="otherGender">Other</label>
+                        </div>
+      
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example9">Phone number</label>
+                        <input type="number" name="phone" id="form3Example9" class="form-control form-control-lg" required>
+                       
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example90">Email Id</label>
+                        <input type="email" name="email" id="form3Example90" required class="form-control form-control-lg" />
+                       
+                      </div>
+      
+                      <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example99">House sitter Gender</label>
+                        <select class="form-select" name="hs_age" aria-label="Default select example" required>
+                            <option value="" disabled selected>Open this select menu</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                            <option value="Other">Others</option>                        
+                        </select>
+                      </div>  
+                      
+                      <div type="text">
+                        <b>NOTE: Please apply before two days so we can verify to nearby police station </b>
+                      </div>
+                      <div type="button" class="d-flex justify-content-end pt-3">
+
+                        
+                        <input type="submit" class="btn btn-primary" value="submit">
+        
+                    </div>
+                      </div>
+                    </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section> 
+      <!-- registration 2 -->
+     
+      <footer>
+        <p class="final text-center"> &COPY; copyright reserved 2022-23, all rights reserved | travel assistance.com</p> <br>
+    </footer>
+    
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
+</script>
+</body>
+</html>

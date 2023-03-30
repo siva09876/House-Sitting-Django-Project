@@ -1,0 +1,270 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Travel Assistant</title>
+    <link rel="stylesheet" href="{% static 'css/Home.css' %}" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!--navbar code -->
+    <section id="home">{% include 'my_app/navbar.html' %}</section>
+
+    <b><div class="services" class="text-lg-starts">Staff page</div></b>
+    <!--vertical line-->
+    <hr class="border border-primary border-1 opacity-75" style="width: 100%" />
+
+    <!--image card -->
+    <div class="container">
+      <div class="row justify-content-evenly">
+        <!--card 1-->
+        <div class="col-md-4">
+          <div class="card shadow" style="width: 20rem">
+            <div class="inner">
+              <img
+                src="{% static 'img/sitter 3.jpg' %}"
+                class="card-img-top"
+                alt="house sitter"
+              />
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Taking care</h5>
+              <p class="card-text">
+                House sitters can experience living like locals in different
+                countries and cultures around the world, for anything from a few
+                days to several months, or sometimes even longer.
+              </p>
+              <a href="{% url 'tacking_care' %}" class="btn btn-primary"
+                >Appoint</a
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <!--card 3-->
+          <div class="card shadow" style="width: 20rem">
+            <div class="inner">
+              <img
+                src="{% static 'img/elder.jpg' %}"
+                class="card-img-top"
+                alt="elder"
+              />
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Elder care</h5>
+              <p class="card-text">
+                Elderly care emphasizes the social and personal requirements of
+                senior citizens who wish to age with dignity while needing
+                assistance with daily activities and with healthcare.
+              </p>
+              <a href="{% url 'elder_care' %}" class="btn btn-primary"
+                >Appoint</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--image card second-->
+    <div class="container" style="padding-bottom: 4%">
+      <div class="row justify-content-evenly">
+        <div class="col-md-4">
+          <div class="card shadow" style="width: 20rem">
+            <div class="inner">
+              <img
+                src="{% static 'img/pet dog.jpg' %}"
+                class="card-img-top"
+                alt="house sitter"
+              />
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Pet care</h5>
+              <p class="card-text">
+                Whether you have a dog, cat, bird, or really any other type of
+                pet, you can trust us to look after them while you are away. We
+                all take care of any food, water and exercise needs and of
+                course, give your pet all the love and attention they want.
+              </p>
+              <a href="{% url 'pet_care' %}" class="btn btn-primary">Appoint</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <!--card 2-->
+          <div class="card shadow" style="width: 20rem">
+            <div class="inner">
+              <img
+                src="{% static 'img/everything.jpg' %}"
+                class="card-img-top"
+                alt="owner"
+              />
+            </div>
+            <div class="card-body text-center">
+              <h5 class="card-title">Everything</h5>
+              <p class="card-text">
+                All services will cover in this everything we provide house
+                sitting and eldercare and pet care House sitters look after the
+                pets, home & garden while the home owner is away. It's the
+                ultimate in pet care, house security while owner away
+              </p>
+              <a href="{% url 'everything' %}" class="btn btn-primary"
+                >Appoint</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--vertical line2-->
+    <hr
+      style="margin-top: 35px; width: 100%"
+      class="border border-primary border-1 opacity-75"
+    />
+
+    <!--about us code-->
+    <div class="heading" style="padding-top: 2%">
+      <h1>About Us</h1>
+      <h4>
+        <p>
+          We have Trusted Housesitters, a global, pet-loving community on a
+          mission to create a world.
+        </p>
+      </h4>
+    </div>
+    <section class="about-us" id="About">
+      <img src="{% static 'img/about.jpg' %}" class="img" />
+      <div class="content">
+        <h2>
+          This house-sitting arrangement requires the house sitter to provide
+          regular visits to the home owner's house.
+        </h2>
+        <p>
+          House sitting has evolved from its original purpose of local sitters
+          helping regional pet owners, to a much wider network of international
+          house sitters who travel the world looking after other people's homes
+          and pets. The industry is supported by a number of professional
+          international and regional house-sitting websites that match house
+          sitters with homeowners around the world following the principles of
+          the sharing economy, whereby pet- and home-care services are provided
+          in exchange for free accommodation.
+        </p>
+      </div>
+    </section>
+    <!--footer code-->
+    <br />
+
+    <section id="contact">
+      <footer
+        class="text-center text-lg-start text-white"
+        style="background-color: #181a1f"
+      >
+        <div class="container p-4 pb-0">
+          <section class="p-3 pt-0">
+            <div class="row">
+              <div class="col-md-6 col-lg-6 col-xl-6 mx-auto mt-6">
+                <h6 class="text-uppercase mb-4 font-weight-bold">
+                  Write a Message to Us!
+                </h6>
+                <form
+                  class="contact-form d-flex flex-column align-items-center"
+                  action="https://formsubmit.co/peacefulife5@gmail.com"
+                  method="POST"
+                >
+                  <input type="hidden" name="_captcha" value="false" />
+                  <div class="form-group w-75">
+                    <input
+                      type="name"
+                      class="form-control"
+                      placeholder="Enter Name"
+                      name="name"
+                      required
+                    /><br />
+                  </div>
+                  <div class="form-group w-75">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Email"
+                      name="email"
+                      required
+                    /><br />
+                  </div>
+
+                  <div class="form-group w-75">
+                    <textarea
+                      class="form-control"
+                      type="text"
+                      rows="3"
+                      placeholder="Message"
+                      name="message"
+                      required
+                    ></textarea
+                    ><br />
+                  </div>
+                  <button type="submit" class="btn btn-submit btn-info w-75">
+                    Submit</button
+                  ><br />
+                </form>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Service</h6>
+                <p>House Sitting</p>
+                <p>Elder care</p>
+                <p>Pet care</p>
+              </div>
+
+              <hr class="w-100 clearfix d-md-none" />
+
+              <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
+                <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
+                <p><i class="fas fa-home mr-3"></i> Chennai, TamilNadu</p>
+                <p>
+                  <i class="fas fa-envelope mr-3"></i> travelassist@gmail.com
+                </p>
+                <p><i class="fas fa-phone mr-3"></i> +91 1234567890</p>
+                <p><i class="fas fa-print mr-3"></i> 044 1234 1234</p>
+              </div>
+            </div>
+          </section>
+
+          <hr class="my-3" />
+
+          <section class="p-3 pt-0">
+            <div
+              class="row d-flex align-items-center"
+              style="padding-left: 35%"
+            >
+              <div class="col-md-7 col-lg-8 text-center text-md-start">
+                <!-- Copyright -->
+                <div class="p-3">
+                  © 2023 Copyright :
+                  <a class="text-white" href="#home">travelassistant.com</a>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </footer>
+    </section>
+  </body>
+</html>

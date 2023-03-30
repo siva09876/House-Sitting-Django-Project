@@ -1,0 +1,17 @@
+*{
+    box-sizing:border-box;
+    margin: 0%;
+    padding: 0;
+}
+form{  
+    width:fit-content;
+    justify-content:center;
+    
+}
+.footer{
+    text-align: center;
+    margin-top: 3%;
+    background-color: rgba(0,0,0,0.644);
+    color:rgb(255, 255, 255);
+}
+

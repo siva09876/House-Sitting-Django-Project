@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+      crossorigin="anonymous"
+    ></script>
+
+    <title>Submitted Forms</title>
+  </head>
+  <body>
+    {% include 'my_app/navbar.html' %} {% if submitted %}
+    <br />
+    {% for obj in submitted %}
+    <div class="card text-center">
+      <div class="card-header"><h5>Appoint:{{obj.to_appoint}}</h5></div>
+      <div class="card-body">
+        <h6 class="card-title">Full Name: {{obj.fullname}}</h6>
+        <p class="card-text">
+          Starting Date: {{obj.starting_date}}&nbsp;&nbsp;Ending Date:
+          {{obj.ending_date}}
+        </p>
+        <p class="card-text">House Type: {{obj.house_type}}</p>
+        <p class="card-text">Address: {{obj.address}}</p>
+
+        <p class="card-text">Shift: {{obj.staying_in_house}}</p>
+        <p class="card-text">Sitter Allotment: {{obj.sitter_allotment}}</p>
+      </div>
+      <div class="card-footer text-muted">
+        City: {{obj.city}}&nbsp;&nbsp;State: {{obj.state}}&nbsp;&nbsp;Pincode:
+        {{obj.pincode}}
+      </div>
+    </div>
+    <br />
+    {% endfor %}
+    <br />{% else %}
+    <style>
+      #results {
+        margin-top: 5%;
+        margin-left: 20%;
+      }
+      #results_h {
+        margin-left: 42%;
+        margin-top: 5%;
+        color: rgb(15, 15, 22);
+      }
+    </style>
+    <img id="results" src="{% static 'img/no_result.gif' %}" alt="" />
+    <h4 id="results_h">No Results Found!</h4>
+    {% endif %}
+  </body>
+</html>

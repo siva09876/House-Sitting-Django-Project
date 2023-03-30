@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+  html,body{
+    height: 100vh;
+    width: 100%;
+    font-family: 'Poppins', sans-serif;
+    justify-content:center !important;
+    justify-content: space-evenly;
+  }
+  nav{
+    width:100%;
+    position: sticky !important; 
+    left:0;
+    top:0;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, .5);
+    z-index: 10;
+  }
+  .navbar-brand{
+    font-weight:650;
+  }
+  .nav-link{
+    color: white !important;
+  }
+  .nav-link:hover{
+    border-bottom: 3px solid white;
+  }
+.carousel-item::before{
+  content:"";
+  display: block;
+  position:absolute;
+  top:0;
+  left:0;
+  bottom: 0;
+  right:0;
+  background: rgb(12, 9, 9);
+  opacity:0.5;
+  justify-items:center;
+}
+.carousel-inner img{
+    width: 100%;
+    height: 100%;
+    justify-items:center;
+}
+.carousel-item{
+  height: 100vh;
+  min-height: 300px;
+  background: no-repeat scroll center scroll;
+  -webkit-background-size: cover;
+  background-size:cover;
+}
+.carousel-caption{
+  bottom: 180px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+.carousel-caption h5{
+  font-size: 100px;
+  font-weight: 500;
+}
+.carousel-caption p{
+  font-size: 18px;
+  top: 2rem;
+  justify-content: center;
+}
+.slider-btn{
+  margin-top: 30px;
+}
+.slider-btn .btn{
+  background-color:rgb(26, 155, 206);
+  /*color: white;*/
+  border-radius:10px;
+  padding: 1.5rem 2rem;
+  font-size: 1rem;
+}
+.container{
+    margin-top: 5%;
+    margin-left: 40px;
+    width: 100px;
+}
+
+.second section{
+  justify-content:right;
+  width:100%;
+}
+
+.inner{
+    overflow:hidden;
+}
+.inner img{
+    transition: all 1.5s ease;
+}
+.inner:hover img{
+    transform: scale(1.5);
+}
+.services{
+  font-size: 50px;
+  text-align: center;
+  justify-content: center; 
+  color: #36455c;
+  font-weight: 600; 
+  margin-top: 5px;
+}
+
+/*about us */
+*{
+  margin:0px;
+  padding:0px;
+  box-sizing: border-box;
+  font-family: sans-serif;
+
+
+}
+.heading{
+  text-align: center;
+  margin-top: 25px;
+}
+.heading h1{
+  font-size: 50px;
+  color:#36455c; 
+  margin-bottom: 10px;
+}  I
+.heading p{
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 50px;
+}
+.about-us{
+  display: flex;
+  align-items: center;
+  width:100%;
+  margin:auto;
+}
+.about-us img{
+  flex:0 100%;
+  max-width: 50%;
+  height: auto;
+  padding-left: 5%;
+}
+.content{
+  padding: 60px;
+}
+.content h2{
+  color: #3c7dd1;
+  font-size: 24px;
+  margin: 15px 0px;
+}  
+.content p{
+  color: #666;
+  font-size: 18px;
+  line-height: 1.5;
+  margin: 15px px;
+  margin-right: 5px;
+}
+.footer{
+  background-color: #3f3f3f;
+  color: #d5d5d5;
+  padding-top: 2rem;
+  flex: 0% 90%;
+  justify-content: cover !important; 
+  justify-content: center;
+  color: whitesmoke;
+}
+hr.light{
+  border-top: 1px solid #d5d5d5;
+  width: 100%;
+  margin-top: .8rem;
+  margin-bottom: 1rem;
+
+}
+
+body{
+  height:100vh;
+  width:100%;
+}
+
+
+ @media(max-width: 480px){
+  .about-us{
+    flex-direction: column;
+    flex-direction: row;
+}
+.about-us img{
+   
+    width:100%;
+    height:100%;
+}
+.content{
+    flex: 0 100%;
+    max-width: 100%;   
+    padding: 15px;
+}
+}
+ 

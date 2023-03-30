@@ -1,0 +1,13 @@
+.wrapper {
+  border-top: 03px solid rgb(12, 114, 231);
+  border-bottom: 03px solid rgb(12, 114, 231);
+}
+.wrapper a {
+  color: rgb(12, 114, 231);
+}
+.bg-light {
+  background-color: lightsalmon;
+}
+#error {
+  color: red;
+}
